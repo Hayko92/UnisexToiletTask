@@ -1,9 +1,9 @@
 public class Employee {
-    private   Sex sex;
+    private final Sex sex;
 
     public Employee(Sex sex) {
-     this.sex = sex;
-         }
+        this.sex = sex;
+    }
 
     @Override
     public String toString() {

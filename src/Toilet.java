@@ -4,7 +4,6 @@ import java.util.LinkedList;
 public class Toilet {
     private final LinkedList<Employee> employeesInToilet = new LinkedList<>();
 
-
     public void addMen() {
 
         synchronized (this) {
