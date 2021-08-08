@@ -1,16 +1,16 @@
 public class Employee {
-    private final Sex sex;
+    private final Gender gender;
 
-    public Employee(Sex sex) {
-        this.sex = sex;
+    public Employee(Gender gender) {
+        this.gender = gender;
     }
 
     @Override
     public String toString() {
-        return sex.toString();
+        return gender.toString();
     }
 
-    public Sex getSex() {
-        return sex;
+    public Gender getGender() {
+        return gender;
     }
 }

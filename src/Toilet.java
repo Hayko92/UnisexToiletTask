@@ -14,7 +14,7 @@ public class Toilet {
                     e.printStackTrace();
                 }
             }
-            addEmployeeInToilet(Sex.MALE);
+            addEmployeeInToilet(Gender.MALE);
             notifyAll();
 
         }
@@ -30,28 +30,28 @@ public class Toilet {
                     e.printStackTrace();
                 }
             }
-            addEmployeeInToilet(Sex.FEMALE);
+            addEmployeeInToilet(Gender.FEMALE);
             notifyAll();
 
         }
     }
 
-    private void addEmployeeInToilet(Sex sex) {
-        Employee current = new Employee(sex);
+    private void addEmployeeInToilet(Gender gender) {
+        Employee current = new Employee(gender);
         employeesInToilet.add(current);
         System.out.println("entered:" + current + ": Now  in toilet:" + employeesInToilet);
     }
 
     private synchronized boolean isManIn() {
         for (Employee employee : employeesInToilet) {
-            if (employee.getSex().equals(Sex.MALE)) return true;
+            if (employee.getGender().equals(Gender.MALE)) return true;
         }
         return false;
     }
 
     private synchronized boolean isWomenIn() {
         for (Employee employee : employeesInToilet) {
-            if (employee.getSex().equals(Sex.FEMALE)) return true;
+            if (employee.getGender().equals(Gender.FEMALE)) return true;
         }
         return false;
     }
